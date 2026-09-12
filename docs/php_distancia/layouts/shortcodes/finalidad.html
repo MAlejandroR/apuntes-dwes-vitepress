@@ -1,0 +1,33 @@
+{{ $title := .Get "title" | default "Finalidad" }}
+{{ $sub_title := .Get "sub_title" | default "Al terminar el tema deberás..." }}
+{{ $icon_image := .Get "icon_image" }}
+
+<div style="border: 1px solid royalblue; border-radius: 5px; overflow: hidden;">
+  <div style="background-color: royalblue; color: white;
+    font-weight: bold; padding: 10px; display: flex; align-items: center;">
+    <!-- Icono de finalidad o imagen personalizada -->
+    <span style="margin-right: 8px;">
+            {{ if $icon_image }}
+                <img src="{{ $icon_image }}" alt="Icono de Finalidad" style="width: 24px; height: 24px;">
+            {{ else }}
+                <i class="fas fa-flag-checkered"></i> <!-- Icono de bandera para "Finalidad" -->
+            {{ end }}
+        </span>
+    <!-- Título en negrita con un poco de margen -->
+    <span>{{ $title }}</span>
+  </div>
+
+  <h3 style="padding: 5px; font-weight: bold; color: royalblue;">{{ $sub_title }}</h3>
+
+  <hr style="border-color: lightsteelblue; border-width: 3px"/>
+  <!-- Texto con fondo más claro y margen interno -->
+  <div style="background-color: #f0f8ff; color: royalblue; padding: 10px;">
+    <ul>
+      {{ range (split .Inner "\n") }}
+      {{- if gt (len .) 0 -}}
+      <li>{{ . | markdownify }}</li>
+      {{ end }}
+      {{ end }}
+    </ul>
+  </div>
+</div>

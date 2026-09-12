@@ -1,0 +1,33 @@
+{{ $title := .Get "title" | default "Referencias" }}
+{{ $sub_title := .Get "sub_title" | default "Fuentes de Información" }}
+{{ $icon_image := .Get "icon_image" }}
+
+<div style="border: 1px solid navy; border-radius: 5px; overflow: hidden;">
+    <div style="background-color: navy; color: white;
+    font-weight: bold; padding: 10px; display: flex; align-items: center;">
+        <!-- Icono o imagen personalizada para referencias -->
+        <span style="margin-right: 8px;">
+            {{ if $icon_image }}
+                <img src="{{ $icon_image }}" alt="Icono de Referencias" style="width: 24px; height: 24px;">
+            {{ else }}
+                <i class="fas fa-book"></i> <!-- Icono de libro para "Referencias" -->
+            {{ end }}
+        </span>
+        <!-- Título en negrita con un poco de margen -->
+        <span>{{ $title }}</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight: bold; color: navy;">{{ $sub_title }}</h3>
+
+    <hr style="border-color: lightblue; border-width: 3px"/>
+    <!-- Texto con fondo más claro y margen interno -->
+    <div style="background-color: #e0f7fa; color: navy; padding: 10px;">
+        <ul>
+            {{ range (split .Inner "\n") }}
+            {{- if gt (len .) 0 -}}
+            <li>{{ . | markdownify }}</li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+</div>

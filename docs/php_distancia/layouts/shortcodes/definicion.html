@@ -1,0 +1,13 @@
+<div class="definicion-concepto">
+  <div class="definicion-titulo">
+    {{ with .Get "icon" }}
+    <i class="{{ . }}" aria-hidden="true"></i>
+    {{ else }}
+    <i class="fas fa-info-circle" aria-hidden="true"></i>
+    {{ end }}
+    <strong>{{ .Get "title" }}</strong>
+  </div>
+  <div class="definicion-contenido">
+    {{ .Inner }}
+  </div>
+</div>

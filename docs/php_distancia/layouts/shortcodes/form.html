@@ -1,0 +1,19 @@
+{{ .Inner }}
+
+{{ $solucion := .Get "solucion" | default "Sin solución (pendiente)" }}
+<form action="procesar.php" method="POST">
+<!--<form action="http://localhost:8000/api/instruccion_docker" method="POST">-->
+    <textarea id="texto" name="respuesta" rows="4" cols="50">
+    </textarea>
+    <input type='hidden' name='solucion' value= "{{ $solucion}}" />
+    <br>
+    <input type="submit" value="Evaluar" name="ejercicio">
+    {{ if eq .Page.File.Ext "md" }}
+        {{ .Inner | markdownify }}
+    {{ else }}
+        {{ .Inner | htmlUnescape | safeHTML }}
+    {{ end }}
+</form>
+
+
+

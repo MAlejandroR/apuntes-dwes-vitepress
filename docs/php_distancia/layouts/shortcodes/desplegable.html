@@ -1,0 +1,21 @@
+<details>
+    <summary>{{ .Get "title" }}</summary>
+    <div class="solution-content">
+        {{ .Inner }}
+    </div>
+</details>
+
+<style>
+    .solution-content {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 5px;
+        background-color: #f9f9f9;
+    }
+    summary {
+        cursor: pointer;
+        font-weight: bold;
+        color: #0073e6;
+    }
+</style>

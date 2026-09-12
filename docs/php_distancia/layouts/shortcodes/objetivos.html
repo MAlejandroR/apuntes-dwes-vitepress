@@ -1,0 +1,37 @@
+{{ $title := .Get "title" | default "Objetivos" }}
+{{ $sub_title := .Get "sub_title" | default "Qué veremos aquí" }}
+<!-- Nuevo parámetro para la imagen del icono -->
+{{ $icon_image := .Get "icon_image" }}
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        <!-- Icono de objetivos o imagen personalizada -->
+        <span style="margin-right: 8px;">
+            {{ if $icon_image }}
+                <img src="{{ $icon_image }}" alt="Icono de Objetivos" style="width: 24px; height: 24px;">
+            {{ else }}
+                <i class="fas fa-check-circle"></i> <!-- Icono de diana para "Objetivos" -->
+            {{ end }}
+        </span>
+        <!-- Título en negrita con un poco de margen -->
+        <span>{{ $title }}</span>
+    </div>
+
+    <h3 style="padding: 5px; font-weight:bold">{{ $sub_title }}</h3>
+
+    <hr style="border-color:seagreen; border-width:3px"/>
+    <!-- Texto con fondo más claro y margen interno -->
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+            {{ range (split .Inner "\n") }}
+            {{- if gt (len .) 0 -}}
+            <li>{{ . }}</li>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </div>
+    <!-- Sección de Referencias -->
+
+
+</div>

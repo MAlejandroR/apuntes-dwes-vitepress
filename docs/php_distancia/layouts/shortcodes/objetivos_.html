@@ -1,0 +1,29 @@
+{{ $title := .Get "title" | default "Objetivos" }}
+{{ $sub_title := .Get "sub_title" | default "Qué veremos aquí" }}
+
+<div style="border: 1px solid darkgreen; border-radius: 5px; overflow: hidden;">
+    <div style="background-color:darkgreen; color:white;
+    font-weight:bold; padding:10px; display: flex; align-items: center;">
+        <!-- Icono de objetivos -->
+        <span style="margin-right: 8px;">
+            <i class="fas  fa-check-circle"></i> <!-- Icono de diana para "Objetivos" -->
+        </span>
+        <!-- Título en negrita con un poco de margen -->
+        <span >{{ $title }}</span>
+    </div>
+
+    <h3 style="padding: 5px;font-weight:bold"> {{$sub_title}}</h3>
+
+    <hr style="border-color:seagreen;border-width:3px"/>
+    <!-- Texto con fondo más claro y margen interno -->
+    <div style="background-color:#d0f0d0; color:darkgreen; padding: 10px;">
+        <ul>
+        {{ range (split .Inner "\n")}}
+            {{- if gt (len .) 0 -}}
+              <li>{{.}}</li>
+            {{end}}
+        {{ end}}
+        </ul>
+
+    </div>
+</div>

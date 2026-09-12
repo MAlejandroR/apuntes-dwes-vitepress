@@ -1,0 +1,6 @@
+{{ $color := .Get "color" | default "red" }}
+{{ $width := .Get "width" | default "3px" }}
+<!--<hr style="color:{{$color}} weight: {{$width}}">-->
+<span style="border: 1px {{$color}}; border-width: {{$width}};">
+{{.Inner}}
+</span>

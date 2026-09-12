@@ -1,0 +1,27 @@
+/*
+Projects can override this file. For details, see:
+https://www.docsy.dev/docs/adding-content/lookandfeel/#project-style-files
+*/
+$font-size-base: 1.5rem;
+$sidebar-font-size: 1.2 rem; /* Define el tamaño de fuente específico para el menú */
+
+
+.td-sidebar-nav__section-title {
+  font-size: $sidebar-font-size; /* Cambia el tamaño de las secciones principales del menú */
+}
+
+.td-sidebar-link {
+  font-size: $sidebar-font-size; /* Cambia el tamaño de los enlaces del menú */
+}
+
+.td-sidebar-nav__section.with-child {
+  font-size: $sidebar-font-size; /* Cambia el tamaño de las secciones con submenús */
+}
+
+/* Define un tamaño más pequeño para los submenús */
+.td-sidebar-nav__section .ul-1,
+.td-sidebar-nav__section .ul-2,
+.td-sidebar-nav__section .ul-3,
+.td-sidebar-nav__section .ul-4 {
+  font-size: 1rem; /* Ajusta según el tamaño que prefieras */
+}

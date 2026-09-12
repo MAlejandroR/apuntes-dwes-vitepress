@@ -1,0 +1,40 @@
+@import "icons";
+.small-bold-text {
+  font-size: 0.70em !important;  /* Ajusta el tamaño para que sea pequeño */
+  font-weight: 400 !important ;  /* Hace el texto en negrita */
+  color: #800080   !important ;        /* Color de texto; puedes ajustarlo según el diseño */
+}
+.cover-title-background {
+  display: inline-block;
+  background-color: rgba(0, 50, 0, 0.2); /* Fondo negro con 60% de transparencia */
+  color: #ffffff; /* Texto en blanco para un buen contraste */
+  padding: 10px 15px; /* Espaciado interno para que no esté pegado al texto */
+  border-radius: 5px; /* Bordes redondeados para estilo */
+  text-align: center;
+  font-size: 3em;
+  font-weight: bold;
+}
+// Tamaño para el logo
+.navbar-brand img {
+  width: 120px; /* Cambia este valor para ajustar el ancho */
+  height: auto; /* Mantiene la proporción del logo */
+}
+.iframe-container {
+  zoom: 1.5; /* Aumenta el tamaño del contenido */
+  transform-origin: 0 0;
+  overflow: auto;
+}
+
+.sidebar .nav .nav-link {
+  font-size: 10px; /* Ajusta el tamaño según lo que necesites */
+}
+// Tamaño para el logo
+.navbar-brand img {
+  width: 120px; /* Cambia este valor para ajustar el ancho */
+  height: auto; /* Mantiene la proporción del logo */
+}
+.iframe-container {
+  zoom: 1.5; /* Aumenta el tamaño del contenido */
+  transform-origin: 0 0;
+  overflow: auto;
+  }
