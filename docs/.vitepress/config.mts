@@ -246,7 +246,7 @@ export default withMermaid(
     ],
     outline: 'deep',
     socialLinks: [
-      { icon: 'github', link: 'https://MAlejandroR/github.com' },
+      { icon: 'github', link: 'https://github.com/MAlejandroR/apuntes-dwes-vitepress.git' },
 
     ],
     search: {
