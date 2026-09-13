@@ -28,6 +28,8 @@ features:
     details: Preguntas tipo prueba y cómo pensarlas, no solo memorizarlas.
 ---
 
+
+
 <div class="home-extra">
 
 <RequestJourney />

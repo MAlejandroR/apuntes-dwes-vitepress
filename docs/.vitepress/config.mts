@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 import container from 'markdown-it-container'
 import type MarkdownIt from 'markdown-it'
-import { goatCounter } from './site'
+import { fetchVisitCount, goatCounter } from './site'
 
 function dawsContainers(md: MarkdownIt) {
   function labeledBox(
@@ -57,6 +57,8 @@ function dawsContainers(md: MarkdownIt) {
   })
 }
 
+const dawsVisitCount = await fetchVisitCount()
+
 export default withMermaid(
   defineConfig({
     lang: 'es',
@@ -65,6 +67,11 @@ export default withMermaid(
       'Desarrollo web en entorno servidor: PHP, Laravel, Docker, Git y el viaje de una petición HTTP.',
     srcExclude: ['php_distancia/**'],
     // outDir: '../dist',
+    vite: {
+      define: {
+        __DAWS_VISIT_COUNT__: JSON.stringify(dawsVisitCount),
+      },
+    },
     markdown: {
       lineNumbers: true,
       config(md) {

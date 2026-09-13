@@ -6,7 +6,9 @@ DIST="docs/.vitepress/dist"
 
 echo "================================="
 echo " Generando sitio"
-echo "================================="build.sh
+echo "================================="
+
+./build.sh
 
 
 echo
@@ -16,7 +18,7 @@ echo "================================="
 
 rsync -avz --delete \
     "$DIST/" \
-    debian@bancodelibros:~/www/servidor/apuntes/
+    debian@manuel.web.infenlaces.com:~/www/servidor/apuntes/
 
 
 echo

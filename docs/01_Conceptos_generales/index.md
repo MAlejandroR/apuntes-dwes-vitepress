@@ -3,6 +3,8 @@ title: Introducción al desarrollo web
 ---
 
 <script setup>
+import DropDown from "../.vitepress/theme/components/DropDown.vue";
+
 const quizWeb = [
   {
     text: 'Un entorno compilado, porque es mucho más rápido',
@@ -125,21 +127,27 @@ El planteamiento (el que se expone en clase) es este:
 
 ::: actividad Análisis
 Un posible análisis:
-
 <!-- Fuente: https://es.wikieducator.org/images/5/55/E1g_analisis.png -->
-![Análisis de la ecuación de segundo grado](./e1g_analisis.png)
+<DropDown title="Análisis de una ecuación de segundo grado" password="analisis">
+<img src="./e1g_analisis.png" alt="Análisis de la ecuación de segundo grado">
+
+</DropDown>
 :::
 
 ::: actividad Un posible diseño
 <!-- Fuente: https://es.wikieducator.org/images/0/0f/EcuacionesSegundoGradoDiseno.png -->
-![Diseño de la solución](./ecuaciones_segundo_grado_diseno.png)
+<DropDown title="Diseño de la ecuación" password="diseño">
+<img src="./ecuaciones_segundo_grado_diseno.png" alt="Diseño de la solución">
+</DropDown>
 :::
 
 ::: actividad Implementación
 Consiste en **transcribir el diseño** usando un lenguaje concreto, con su sintaxis.
 
 <!-- Fuente: https://es.wikieducator.org/images/7/72/Ecuaciones_grado.png -->
-![Implementación de la ecuación de segundo grado](./ecuaciones_grado.png)
+<DropDown title="Implementación de la ecuación de segundo grado" password="implementacion">
+  <img src="./ecuaciones_grado.png" alt="Implementación de la ecuación de segundo grado">
+</DropDown>
 :::
 
 Más adelante eso se hace en PHP. El esquema no cambia: lo que cambia es la sintaxis.
@@ -166,7 +174,14 @@ Java hace las dos cosas: se **compila** a bytecode y la máquina virtual lo **in
 />
 
 ::: pageinfo Lo que nos interesa en DAWS
-PHP es **interpretado**: editas el `.php`, recargas, el servidor lo ejecuta. Hoy PHP 8 además guarda bytecode en **OPcache**, así que no es “lento como en 2005”. Y sí: en internet también hay servidores en Go o Java. **En este módulo el modelo es PHP interpretado** detrás de Apache (en clase, casi siempre dentro de Docker).
+* PHP es **interpretado**: Modificamos el archio <strong>.php</strong> y al recargar la página, el servidor  interpreta y ejecuta el código en ese momento, no se compila (CGI)
+
+
+* La versión actual es PHP 8.5 (8.6 está en testing) además guarda bytecode en **OPcache**, así que no es “lento como en 2005”.<br />
+
+* En internet también encontramos servidores y aplicaciones desarrollados con Go, Java, Python, PHP, etc. No existe una tecnología mejor en todos los casos: cada una tiene ventajas, inconvenientes y escenarios donde resulta más adecuada. En este módulo trabajaremos principalmente con PHP detrás de Apache, normalmente dentro de Docker.
+
+* No buscamos demostrar que PHP es mejor; buscamos aprender desarrollo web del lado servidor, necesitamos usar alguna tecnología, y usremos  PHP.
 :::
 
 ## Una aplicación web

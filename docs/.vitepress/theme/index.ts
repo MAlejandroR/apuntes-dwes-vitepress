@@ -13,6 +13,7 @@ import ButtonSlides from './components/ButtonSlides.vue'
 import Objetivos from './components/Objetivos.vue'
 import EnConstruccion from './components/EnConstruccion.vue'
 import Quiz from './components/Quiz.vue'
+import DropDown from  './components/DropDown.vue'
 
 export default {
   extends: DefaultTheme,
@@ -28,5 +29,6 @@ export default {
     app.component('Objetivos', Objetivos)
     app.component('EnConstruccion', EnConstruccion)
     app.component('Quiz', Quiz)
+    app.component('DropDown', DropDown)
   },
 } satisfies Theme
