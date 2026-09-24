@@ -14,7 +14,7 @@ Antes de programar de verdad hace falta un **taller**. No es el “tema 1” de 
 ## De qué va este bloque
 
 - [Git](/02_entornos_herramientas/git) — commits, ramas, remoto
-- [Docker](/02_entornos_herramientas/docker) — prioridad: al menos **8 horas**
+- [Docker](/02_entornos_herramientas/docker/00_index) — prioridad: al menos **8 horas**
 - [IA en clase](/02_entornos_herramientas/ia) — cómo se usa (y cómo no)
 - [Comandos Linux](/02_entornos_herramientas/linux) — lo mínimo para el servidor
 - [Redes](/02_entornos_herramientas/redes/) · [OSI](/02_entornos_herramientas/osi/) · [Internet](/02_entornos_herramientas/internet/) · [WWW](/02_entornos_herramientas/www/)

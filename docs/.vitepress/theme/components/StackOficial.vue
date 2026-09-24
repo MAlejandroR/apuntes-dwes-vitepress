@@ -1,29 +1,3 @@
-<template>
-  <section class="stack">
-    <p class="stack__kicker">No te lo inventes</p>
-    <h2>Las webs oficiales, a un clic</h2>
-    <p class="stack__lead">
-      En clase usamos estas fuentes. Si dudas, primero la documentación oficial:
-      es más aburrida que un tutorial random… y mucho más cierta.
-    </p>
-
-    <div class="stack__grid">
-      <a
-        v-for="tool in tools"
-        :key="tool.name"
-        class="stack__card"
-        :href="tool.href"
-        target="_blank"
-        rel="noreferrer"
-        :style="{ '--c': tool.color }"
-      >
-        <span class="stack__name">{{ tool.name }}</span>
-        <span class="stack__url">{{ tool.short }}</span>
-        <span class="stack__why">{{ tool.why }}</span>
-      </a>
-    </div>
-  </section>
-</template>
 
 <script setup>
 const tools = [
@@ -71,6 +45,32 @@ const tools = [
   },
 ]
 </script>
+<template>
+  <section class="stack">
+    <p class="stack__kicker">No te lo inventes</p>
+    <h2>Las webs oficiales, a un clic</h2>
+    <p class="stack__lead">
+      En clase usamos estas fuentes. Si dudas, primero la documentación oficial:
+      es más aburrida que un tutorial random… y mucho más cierta.
+    </p>
+
+    <div class="stack__grid">
+      <a
+          v-for="tool in tools"
+          :key="tool.name"
+          class="stack__card"
+          :href="tool.href"
+          target="_blank"
+          rel="noreferrer"
+          :style="{ '--c': tool.color }"
+      >
+        <span class="stack__name">{{ tool.name }}</span>
+        <span class="stack__url">{{ tool.short }}</span>
+        <span class="stack__why">{{ tool.why }}</span>
+      </a>
+    </div>
+  </section>
+</template>
 
 <style scoped>
 .stack {

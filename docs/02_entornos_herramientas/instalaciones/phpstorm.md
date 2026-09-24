@@ -41,7 +41,11 @@ Abre el panel de control de XAMPP y asegúrate de iniciar Apache.
 <Color>Comprobar instalación</Color>
 Abre tu navegador y visita `http://localhost/`. Deberías ver la página de bienvenida de XAMPP.
 
-## Creación de docker 
+## Creación de docker
+
+::: pageinfo
+La semana de clase (imagen, comandos, compose) está en [Docker](/02_entornos_herramientas/docker/00_index). Aquí se repite el recorte de ficheros para PhpStorm y permisos.
+:::
 
 * Es esta la solución que vamos a utilizar.
 * Para ello crearemos un <Color>docker-compose.yaml</Color>, que nos levante un servicio con php y apache2.

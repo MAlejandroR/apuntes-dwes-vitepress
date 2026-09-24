@@ -3,8 +3,6 @@ title: Introducción al desarrollo web
 ---
 
 <script setup>
-import DropDown from "../.vitepress/theme/components/DropDown.vue";
-
 const quizWeb = [
   {
     text: 'Un entorno compilado, porque es mucho más rápido',
@@ -106,7 +104,8 @@ flowchart LR
   A[Analizar] --> D[Diseñar]
   D --> I[Implementar]
   I --> P[Probar]
-  P -.->|no encaja| A
+  P --> E{¿Errores?}
+  E -.->|Si hay errores, volvemos| A
 ```
 
 <!-- Fuente: https://es.wikieducator.org/images/8/89/AnalisisDesignerImplementacion.png -->
@@ -194,7 +193,7 @@ Hay software de escritorio, de tiempo real, científico, juegos… y **aplicacio
 
 En una app de escritorio el programa puede **esperar** a que teclees un valor. En la web no: el servidor recibe la solicitud **junto con los datos** (formulario, URL, JSON) y responde. Esa diferencia condiciona todo el módulo.
 
-La continuación —cliente, servidor, URI, `curl`— está en [Aplicación web](/03_conceptos_web/).
+La continuación —cliente, servidor, URI, `curl`— está en [Aplicación web](/construccion).
 
 
 | Bloque | Qué es |

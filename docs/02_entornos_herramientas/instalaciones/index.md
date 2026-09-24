@@ -83,10 +83,8 @@ Abre tu navegador y visita `http://localhost/`. Deberías ver la página de bien
 
 ### Creación de Docker
 
-::: warning Warning
-Esta tecnología la emplearemos más tarde.
-Cuando la veáis en el módulo de despliegue.
-Pero la dejamos aquí, para recuperarla en su momento.
+::: pageinfo
+El laboratorio de clase está en [Docker](/02_entornos_herramientas/docker/00_index). Aquí quedan los recortes de `Dockerfile` y `compose` que usamos al instalar.
 :::
 
 - Es esta la solución que vamos a utilizar.

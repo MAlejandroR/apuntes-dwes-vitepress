@@ -1,61 +1,9 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
-import container from 'markdown-it-container'
-import type MarkdownIt from 'markdown-it'
 import { fetchVisitCount, goatCounter } from './site'
+import { dawsContainers } from "./markdows/containers";
 
-function dawsContainers(md: MarkdownIt) {
-  function labeledBox(
-    name: string,
-    className: string,
-    kicker: string,
-    defaultSub: string,
-  ) {
-    md.use(container, name, {
-      render(tokens, idx) {
-        if (tokens[idx].nesting === 1) {
-          const sub =
-            tokens[idx].info
-              .trim()
-              .replace(new RegExp(`^${name}\\s*`, 'i'), '')
-              .trim() || defaultSub
-          return `<div class="${className}">
-<p class="${className}__kicker">${md.utils.escapeHtml(kicker)}</p>
-<p class="${className}__sub">${md.utils.escapeHtml(sub)}</p>
-<div class="${className}__body">\n`
-        }
-        return '</div></div>\n'
-      },
-    })
-  }
 
-  labeledBox('objetivos', 'daws-objetivos', 'Objetivos', 'Qué veremos aquí')
-  labeledBox(
-    'finalidad',
-    'daws-finalidad',
-    'Finalidad',
-    'Al terminar el tema deberás…',
-  )
-  labeledBox(
-    'referencias',
-    'daws-referencias',
-    'Referencias',
-    'Dónde buscar información',
-  )
-  labeledBox('definicion', 'daws-definicion', 'Definición', 'Concepto')
-  labeledBox('previo', 'daws-previo', 'Conocimiento previo', 'Antes de seguir')
-  labeledBox('actividad', 'daws-actividad', 'Actividad', 'Para hacer ahora')
-  labeledBox('pregunta', 'daws-pregunta', 'Pregunta', 'Para pensar en clase')
-
-  md.use(container, 'pageinfo', {
-    render(tokens, idx) {
-      if (tokens[idx].nesting === 1) {
-        return '<div class="daws-pageinfo">\n'
-      }
-      return '</div>\n'
-    },
-  })
-}
 
 const dawsVisitCount = await fetchVisitCount()
 
@@ -123,15 +71,29 @@ export default withMermaid(
         text: '2. Entorno y Herramientas',
         collapsed: true,
         items: [
-          { text: 'Qué son', link: '/construccion' },
-          { text: 'Git', link: '/construccion' },
-          { text: 'Docker', link: '/construccion' },
-          { text: 'IA en clase', link: '/construccion' },
-          { text: 'Comandos Linux', link: '/construccion' },
+          // { text: 'Qué son', link: '/construccion' },
+          // { text: 'Git', link: '/construccion' },
+          // { text: 'Docker', link: '/construccion' },
+          // { text: 'IA en clase', link: '/construccion' },
           { text: 'Redes', link: '/02_entornos_herramientas/redes/' },
           { text: 'Modelo OSI', link: '/02_entornos_herramientas/osi/' },
           { text: 'Internet', link: '/02_entornos_herramientas/internet/' },
           { text: 'WWW', link: '/02_entornos_herramientas/www/' },
+          { text: 'Comandos Linux', link: '/02_entornos_herramientas/linux.md' },
+          {
+            text: 'Docker',
+            link:'/02_entornos_herramientas/docker/00_index',
+            collapsed: true,
+            items: [
+              { text: 'Conceptos', link: '/02_entornos_herramientas/docker/01_conceptos' },
+              { text: 'Imágenes y Contenedores', link: '/02_entornos_herramientas/docker/02_contenedor_imagenes' },
+              { text: 'Instalación', link: '/02_entornos_herramientas/docker/03_instalacion' },
+              { text: 'Comandos', link: '/02_entornos_herramientas/docker/04_comandos' },
+              { text: 'Dockerfile', link: '/02_entornos_herramientas/docker/dockerfile' },
+              { text: 'Compose', link: '/02_entornos_herramientas/docker/compose' },
+              { text: 'Práctica de la semana', link: '/02_entornos_herramientas/docker/practica' },
+            ],
+          },
           // { text: 'Qué son', link: '/02_entornos_herramientas/' },
           // { text: 'Git', link: '/02_entornos_herramientas/git' },
           // { text: 'Docker', link: '/02_entornos_herramientas/docker' },

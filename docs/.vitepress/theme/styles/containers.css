@@ -1,0 +1,296 @@
+
+.daws-objetivos {
+    margin: 1.4rem 0 2rem;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    border: 3px solid #16a34a;
+    box-shadow: 8px 8px 0 #16a34a;
+}
+
+.daws-objetivos__kicker {
+    margin: 0;
+    padding: 0.85rem 1.15rem 0.2rem;
+    color: #16a34a;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.daws-objetivos__sub {
+    margin: 0;
+    padding: 0 1.15rem 0.85rem;
+    color: #1e1b4b;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.daws-objetivos__body {
+    padding: 0.2rem 1.15rem 1rem;
+    background: color-mix(in srgb, #16a34a 8%, white);
+}
+
+.daws-objetivos__body ul {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.daws-objetivos__body li {
+    margin: 0.45rem 0;
+    color: #14532d;
+    font-weight: 600;
+}
+
+.daws-pageinfo {
+    margin: 1.4rem 0 2rem;
+    padding: 1rem 1.15rem 1.15rem;
+    border-radius: 20px;
+    background: #fff;
+    border: 3px solid #f59e0b;
+    box-shadow: 8px 8px 0 #f59e0b;
+}
+
+.daws-pageinfo > :first-child {
+    margin-top: 0;
+}
+
+.daws-finalidad,
+.daws-referencias,
+.daws-definicion,
+.daws-previo,
+.daws-actividad,
+.daws-pregunta {
+    margin: 1.4rem 0 2rem;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.daws-finalidad {
+    border: 3px solid #2496ed;
+    box-shadow: 8px 8px 0 #2496ed;
+}
+
+.daws-referencias {
+    border: 3px solid #4f46e5;
+    box-shadow: 8px 8px 0 #4f46e5;
+}
+
+.daws-definicion {
+    margin: 1.4rem 0 2rem;
+    overflow: hidden;
+    border: 2px solid #d97706;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: none;
+}
+
+.daws-definicion__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.65rem 0.9rem;
+
+    background: #d97706;
+    color: #fff;
+
+    font-size: 1.5rem;
+}
+
+.daws-definicion__icon {
+    font-size: 0.9rem;
+}
+
+.daws-definicion__body {
+    padding: 0.8rem 0.9rem;
+    background: #fff;
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-definicion__body > :first-child {
+    margin-top: 0;
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-definicion__body > :last-child {
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 1.7;
+
+
+}
+.daws-previo {
+    border: 3px solid #0d9488;
+    box-shadow: 8px 8px 0 #0d9488;
+}
+
+.daws-actividad {
+    border: 3px solid #4f46e5;
+    box-shadow: 8px 8px 0 #4f46e5;
+}
+
+.daws-pregunta {
+    border: 3px solid #e11d48;
+    box-shadow: 8px 8px 0 #e11d48;
+}
+
+.daws-finalidad__kicker,
+.daws-referencias__kicker,
+.daws-definicion__kicker,
+.daws-previo__kicker,
+.daws-actividad__kicker,
+.daws-pregunta__kicker {
+    margin: 0;
+    padding: 0.85rem 1.15rem 0.2rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.daws-finalidad__kicker {
+    color: #2496ed;
+}
+
+.daws-referencias__kicker {
+    color: #4f46e5;
+}
+
+
+/*.daws-definicion__kicker {*/
+/*    margin: 0;*/
+/*    padding: 0.7rem 1.15rem 0.15rem;*/
+/*    color: #fff;*/
+/*    background: #d97706;*/
+/*}*/
+/*.daws-definicion__sub {*/
+/*    margin: 0;*/
+/*    padding: 0 1.15rem 0.7rem;*/
+/*    color: #fff;*/
+/*    background: #d97706;*/
+/*    font-size: 1.2rem;*/
+/*    font-weight: 800;*/
+/*}*/
+.daws-previo__kicker {
+    color: #0d9488;
+}
+
+.daws-actividad__kicker {
+    color: #4f46e5;
+}
+
+.daws-pregunta__kicker {
+    color: #e11d48;
+}
+
+.daws-finalidad__sub,
+.daws-referencias__sub,
+.daws-definicion__sub,
+.daws-previo__sub,
+.daws-actividad__sub,
+.daws-pregunta__sub {
+    margin: 0;
+    padding: 0 1.15rem 0.85rem;
+    color: #1e1b4b;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.daws-finalidad__body,
+.daws-referencias__body,
+.daws-definicion__body,
+.daws-previo__body,
+.daws-actividad__body,
+.daws-pregunta__body {
+    padding: 0.2rem 1.15rem 1rem;
+}
+
+.daws-finalidad__body {
+    background: color-mix(in srgb, #2496ed 8%, white);
+}
+
+.daws-referencias__body {
+    background: color-mix(in srgb, #4f46e5 8%, white);
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-definicion__body {
+    padding: 0.8rem 1.15rem 1rem;
+    background: color-mix(in srgb, #d97706 8%, white);
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-previo__body {
+    background: color-mix(in srgb, #0d9488 8%, white);
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
+}
+
+.daws-actividad__body {
+    background: color-mix(in srgb, #4f46e5 8%, white);
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-pregunta__body {
+    background: color-mix(in srgb, #e11d48 8%, white);
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-finalidad__body ul,
+.daws-referencias__body ul,
+.daws-definicion__body ul,
+.daws-previo__body ul,
+.daws-actividad__body ul,
+.daws-pregunta__body ul {
+    margin: 0;
+    padding-left: 1.15rem;
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.daws-finalidad__body li,
+.daws-referencias__body li,
+.daws-definicion__body li,
+.daws-previo__body li,
+.daws-actividad__body li,
+.daws-pregunta__body li {
+    margin: 0.45rem 0;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.7;
+
+}
+
+.dark .daws-finalidad,
+.dark .daws-referencias,
+.dark .daws-definicion,
+.dark .daws-previo,
+.dark .daws-actividad,
+.dark .daws-pregunta {
+    background: var(--vp-c-bg-soft);
+}
+/* Containers estándar de VitePress */
+.vp-doc .custom-block.tip,
+.vp-doc .custom-block.warning,
+.vp-doc .custom-block.danger,
+.vp-doc .custom-block.info {
+    font-size: 18px;
+    line-height: 1.7;
+}

@@ -1,7 +1,10 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import './custom.css'
+import './styles/containers.css'
 import Layout from './Layout.vue'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+
 
 import RequestJourney from './components/RequestJourney.vue'
 import ObjetivosModulo from './components/ObjetivosModulo.vue'
@@ -14,6 +17,8 @@ import Objetivos from './components/Objetivos.vue'
 import EnConstruccion from './components/EnConstruccion.vue'
 import Quiz from './components/Quiz.vue'
 import DropDown from  './components/DropDown.vue'
+import Cmd from './components/Cmd.vue'
+import CmdPane from './components/CmdPane.vue'
 
 export default {
   extends: DefaultTheme,
@@ -30,5 +35,7 @@ export default {
     app.component('EnConstruccion', EnConstruccion)
     app.component('Quiz', Quiz)
     app.component('DropDown', DropDown)
+    app.component('Cmd', Cmd)
+    app.component('CmdPane', CmdPane)
   },
 } satisfies Theme
