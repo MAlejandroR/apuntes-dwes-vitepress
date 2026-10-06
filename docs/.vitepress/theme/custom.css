@@ -303,13 +303,51 @@
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
 }
 
-.vp-doc {
-  font-size: 18px;
-  line-height: 1.7;
-}
 
+/* Líneas de separación*/
 .vp-doc hr {
   margin: 2rem 0;
   border: 0;
   border-top: 3px solid var(--vp-c-brand-1);
+}
+:root {
+  /* Anchura del Menú lateral izquierdo */
+  --vp-sidebar-width: 220px;
+
+  /* Anchura máxima de toda la zona de documentación  (resto para la derecha)*/
+  --vp-layout-max-width: 1800px;
+
+  /*Tamaño de texto */
+  --dwes-font-size: 20px;
+
+}
+.VPDoc.has-sidebar .content-container {
+  max-width: none !important;
+}
+
+.vp-doc {
+  font-size: var(--dwes-font-size);
+  line-height: 1.7;
+}
+
+.vp-doc p,
+.vp-doc li,
+.vp-doc td,
+.vp-doc th {
+  font-size: inherit;
+}
+
+/* Título personalizado de los grupos del menú lateral izquierdo */
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1.2em;
+  font-weight: 700;
+}
+/* Icono del título de los grupos del menú lateral */
+
+.sidebar-title i {
+  font-size: 1.3em;
 }

@@ -3,7 +3,7 @@ title: PhpStorm y permisos
 ---
 
 ::: pageinfo
-La instalación de Apache, PHP, XAMPP y Docker está en [Herramientas](/02_entornos_herramientas/instalaciones/). Esta página concentra **PhpStorm**, la **licencia del instituto** y los **permisos de Linux** para Apache.
+La instalación de Apache, PHP, XAMPP y Docker está en [Herramientas](/02_entornos_herramientas/instalaciones/index.md). Esta página concentra **PhpStorm**, la **licencia del instituto** y los **permisos de Linux** para Apache.
 :::
 
 ## Instalando en Ubuntu
@@ -44,7 +44,7 @@ Abre tu navegador y visita `http://localhost/`. Deberías ver la página de bien
 ## Creación de docker
 
 ::: pageinfo
-La semana de clase (imagen, comandos, compose) está en [Docker](/02_entornos_herramientas/docker/00_index). Aquí se repite el recorte de ficheros para PhpStorm y permisos.
+La semana de clase (imagen, comandos, compose) está en [Docker](../../02_docker/index.md). Aquí se repite el recorte de ficheros para PhpStorm y permisos.
 :::
 
 * Es esta la solución que vamos a utilizar.

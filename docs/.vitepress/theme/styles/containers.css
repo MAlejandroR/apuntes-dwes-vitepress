@@ -1,45 +1,89 @@
-
 .daws-objetivos {
-    margin: 1.4rem 0 2rem;
+    margin: 1.5rem 0;
+    border: 2px solid #15803d;
+    border-radius: 10px;
     overflow: hidden;
-    border-radius: 20px;
-    background: #fff;
-    border: 3px solid #16a34a;
-    box-shadow: 8px 8px 0 #16a34a;
+    box-shadow: 7px 7px 0 #16a34a;
 }
 
+/* Cabecera: "OBJETIVOS" */
+.daws-objetivos__header {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    padding: .65rem 1rem;
+
+    background: #15803d;
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 .daws-objetivos__kicker {
     margin: 0;
-    padding: 0.85rem 1.15rem 0.2rem;
-    color: #16a34a;
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    padding: 0.65rem 1rem;
+
+    background: #15803d;
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-transform: none;
+
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 
+/* Título del bloque */
 .daws-objetivos__sub {
     margin: 0;
-    padding: 0 1.15rem 0.85rem;
-    color: #1e1b4b;
-    font-size: 1.2rem;
+    padding: 1rem 1.25rem 0.6rem;
+
+    background: rgba(22, 163, 74, 0.07);
+    color: inherit;
+
+    border-bottom: 2px solid rgba(22, 163, 74, 0.25);
+
+    font-size: 2rem;
     font-weight: 800;
 }
 
+/* Contenido */
 .daws-objetivos__body {
-    padding: 0.2rem 1.15rem 1rem;
-    background: color-mix(in srgb, #16a34a 8%, white);
+    padding: 0.7rem 1.25rem 1rem;
+
+    background: rgba(22, 163, 74, 0.07);
+    color: #166534;
+
+    font-size: 1.5rem;
 }
 
 .daws-objetivos__body ul {
-    margin: 0;
-    padding-left: 1.15rem;
+    margin: 0.4rem 0 0;
+    padding-left: 1.4rem;
 }
 
 .daws-objetivos__body li {
-    margin: 0.45rem 0;
-    color: #14532d;
-    font-weight: 600;
+    margin: 0.35rem 0;
+    color: #166534;
+    font-weight: normal;
+}
+.daws-objetivos__content {
+    padding: 1rem 1.25rem;
+    background: rgba(22, 163, 74, 0.07);
+
+}
+.daws-objetivos__title {
+    padding-bottom: .6rem;
+    margin-bottom: .7rem;
+
+    border-bottom: 2px solid rgba(22, 163, 74, 0.25);
+
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 .daws-pageinfo {
@@ -236,7 +280,7 @@
         line-height: 1.7;
     }
 
-}
+
 
 .daws-actividad__body {
     background: color-mix(in srgb, #4f46e5 8%, white);
@@ -293,4 +337,158 @@
 .vp-doc .custom-block.info {
     font-size: 18px;
     line-height: 1.7;
+}
+
+/*Un margen del 7% (dercha e izquierda) para todos los containers (no en responsive)
+*/
+.daws-objetivos,
+.daws-pageinfo,
+.daws-finalidad,
+.daws-referencias,
+.daws-definicion,
+.daws-previo,
+.daws-actividad,
+.daws-pregunta {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+@media (max-width: 768px) {
+    .daws-objetivos,
+    .daws-pageinfo,
+    .daws-finalidad,
+    .daws-referencias,
+    .daws-definicion,
+    .daws-previo,
+    .daws-actividad,
+    .daws-pregunta {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+/* CSS De recuerda, revisar lo anterior*/
+/* =========================================
+   Container: RECUERDA
+   ========================================= */
+
+.daws-recuerda {
+    margin: 1.5rem 5%;
+    border: 2px solid #f59e0b;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 6px 6px 0 #fbbf24;
+}
+
+/* Cabecera */
+.daws-recuerda__header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    padding: 0.7rem 1.2rem;
+
+    background: #f57c00;
+    color: white;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+/* Icono */
+.daws-recuerda__header i {
+    font-size: 1.2rem;
+}
+
+/* Contenido */
+.daws-recuerda__body {
+    padding: 1rem 1.25rem;
+
+    background: #fffdf8;
+    color: var(--vp-c-text-1);
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Párrafos */
+.daws-recuerda__body p {
+    margin: 0.6rem 0;
+}
+
+/* Evita espacios innecesarios arriba y abajo */
+.daws-recuerda__body > :first-child {
+    margin-top: 0;
+}
+
+.daws-recuerda__body > :last-child {
+    margin-bottom: 0;
+}
+
+/* Listas */
+.daws-recuerda__body ul,
+.daws-recuerda__body ol {
+    margin: 0.6rem 0;
+    padding-left: 1.5rem;
+}
+
+/* Código inline */
+.daws-recuerda__body code {
+    font-size: 0.95em;
+}
+/* =========================================
+   Container: PRÁCTICA
+   ========================================= */
+
+.daws-practica {
+    margin: 1.5rem 5%;
+    border: 2px solid #2563eb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 6px 6px 0 #93c5fd;
+}
+
+.daws-practica__header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+
+    padding: 0.7rem 1.2rem;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.daws-practica__header i {
+    font-size: 1.2rem;
+}
+
+.daws-practica__body {
+    padding: 1rem 1.25rem;
+
+    background: #eff6ff;
+    color: var(--vp-c-text-1);
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.daws-practica__body p {
+    margin: 0.6rem 0;
+}
+
+.daws-practica__body > :first-child {
+    margin-top: 0;
+}
+
+.daws-practica__body > :last-child {
+    margin-bottom: 0;
+}
+
+.daws-practica__body ul,
+.daws-practica__body ol {
+    margin: 0.6rem 0;
+    padding-left: 1.5rem;
 }

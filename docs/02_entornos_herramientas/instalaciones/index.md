@@ -84,7 +84,7 @@ Abre tu navegador y visita `http://localhost/`. Deberías ver la página de bien
 ### Creación de Docker
 
 ::: pageinfo
-El laboratorio de clase está en [Docker](/02_entornos_herramientas/docker/00_index). Aquí quedan los recortes de `Dockerfile` y `compose` que usamos al instalar.
+El laboratorio de clase está en [Docker](../../02_docker/index.md). Aquí quedan los recortes de `Dockerfile` y `compose` que usamos al instalar.
 :::
 
 - Es esta la solución que vamos a utilizar.

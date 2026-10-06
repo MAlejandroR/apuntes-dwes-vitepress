@@ -1,6 +1,6 @@
 const favicons = [
     {
-        path: '/02_entornos_herramientas/docker/',
+        path: '/02_docker/',
         icon: '/favicons/docker.ico',
     },
     {

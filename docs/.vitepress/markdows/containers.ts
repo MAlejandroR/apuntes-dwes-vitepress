@@ -67,23 +67,117 @@ export function dawsContainers(md: MarkdownIt) {
         render(tokens, idx) {
             if (tokens[idx].nesting === 1) {
                 const info = tokens[idx].info
-                        .trim()
-                        .replace(/^definicion\s*/i, '')
-                        .trim()
-                const [title,icon ='fa-solid fa-circle-info']= info
+                    .trim()
+                    .replace(/^definicion\s*/i, '')
+                    .trim()
+                const [title, icon = 'fa-solid fa-circle-info'] = info
                     .split('|')
-                    .map(value=>value.trim())
+                    .map(value => value.trim())
 
 
                 return `<div class="daws-definicion">
-<div class="daws-definicion__header">
-<i class="${md.utils.escapeHtml(icon)}" aria-hidden="true"></i>
-<strong>${md.utils.escapeHtml(title|| 'Definición')}</strong>
-</div>
-<div class="daws-definicion__body">\n`
+                                <div class="daws-definicion__header">
+                                    <i class="${md.utils.escapeHtml(icon)}" aria-hidden="true"></i>
+                                    <strong>${md.utils.escapeHtml(title || 'Definición')}</strong>
+                                </div>
+                            <div class="daws-definicion__body">\n`
             }
 
-            return '</div></div>\n'
+            return '</div>  ' +
+                '</div>\n'
         },
-    })
+    }),
+        md.use(container, 'objetivos', {
+            render(tokens: any[], idx: number) {
+                if (tokens[idx].nesting === 1) {
+                    const info = tokens[idx].info
+                        .trim()
+                        .replace(/^objetivos\s*/i, '')
+                        .trim()
+
+                    const [title, icon = 'fa-solid fa-list-check'] = info
+                        .split('|')
+                        .map(value => value.trim())
+
+                    return `
+                <div class="daws-objetivos">
+                    <div class="daws-objetivos__header">
+                        <i class="${md.utils.escapeHtml(icon)}" aria-hidden="true"></i>
+                        <span>Objetivos</span>
+                    </div>
+
+                    <div class="daws-objetivos__content">
+                        <div class="daws-objetivos__title">
+                            ${md.utils.escapeHtml(title || 'Objetivos')}
+                        </div>
+
+                        <div class="daws-objetivos__body">
+`
+                }
+
+                return `
+                        </div>
+                    </div>
+                </div>
+`
+            },
+        }),
+        md.use(container, 'recuerda', {
+            render(tokens: any[], idx: number) {
+                if (tokens[idx].nesting === 1) {
+                    const info = tokens[idx].info
+                        .trim()
+                        .replace(/^recuerda\s*/i, '')
+                        .trim()
+
+                    const [title, icon = 'fa-solid fa-lightbulb'] = info
+                        .split('|')
+                        .map(value => value.trim())
+
+                    return `
+                <div class="daws-recuerda">
+                    <div class="daws-recuerda__header">
+                        <i class="${md.utils.escapeHtml(icon)}" aria-hidden="true"></i>
+                        <span>${md.utils.escapeHtml(title || 'Recuerda')}</span>
+                    </div>
+
+                    <div class="daws-recuerda__body">
+`
+                }
+
+                return `
+                    </div>
+                </div>
+`
+            },
+        }),
+        md.use(container, 'practica', {
+            render(tokens: any[], idx: number) {
+                if (tokens[idx].nesting === 1) {
+                    const info = tokens[idx].info
+                        .trim()
+                        .replace(/^practica\s*/i, '')
+                        .trim()
+
+                    const [title, icon = 'fa-solid fa-keyboard'] = info
+                        .split('|')
+                        .map(value => value.trim())
+
+                    return `
+                <div class="daws-practica">
+                    <div class="daws-practica__header">
+                        <i class="${md.utils.escapeHtml(icon)}" aria-hidden="true"></i>
+                        <span>${md.utils.escapeHtml(title || 'Ahora practica tú')}</span>
+                    </div>
+
+                    <div class="daws-practica__body">
+`
+                }
+
+                return `
+                    </div>
+                </div>
+`
+            },
+        })
 }

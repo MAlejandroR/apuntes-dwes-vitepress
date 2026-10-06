@@ -35,7 +35,7 @@ En realidad cada una es parte de un todo
 
 ## Un proyecto común
 
-![Grupo de trabajo](./grupo.jpg)
+![Grupo de trabajo](./images/grupo.jpg)
 
 *Todos con el mismo objetivo*
 
@@ -57,7 +57,7 @@ Todas/os tenemos un mismo objetivo.
 
 ## Horario del curso
 
-![Horario general del curso](./horarioGeneral.png)
+![Horario general del curso](./images/horarioGeneral.png)
 
 
 ## Evaluación y exámenes

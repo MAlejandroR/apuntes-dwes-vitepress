@@ -19,6 +19,7 @@ import Quiz from './components/Quiz.vue'
 import DropDown from  './components/DropDown.vue'
 import Cmd from './components/Cmd.vue'
 import CmdPane from './components/CmdPane.vue'
+import PhpRunner from './components/PhpRunner.vue';
 
 export default {
   extends: DefaultTheme,
@@ -37,5 +38,6 @@ export default {
     app.component('DropDown', DropDown)
     app.component('Cmd', Cmd)
     app.component('CmdPane', CmdPane)
+    app.component('PhpRunner', PhpRunner)
   },
 } satisfies Theme

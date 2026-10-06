@@ -1,0 +1,80 @@
+services:
+
+  init-volume:
+    image: alpine:latest
+
+    volumes:
+      - php_temp:/var/www/temp
+
+    # Apache ejecuta PHP como www-data (UID 33 / GID 33).
+    # Dejamos el volumen preparado para que pueda escribir.
+    command: chown 33:33 /var/www/temp
+
+
+  web:
+    build:
+      context: ./web
+
+    depends_on:
+      init-volume:
+        condition: service_completed_successfully
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./ejecutar.php:/var/www/html/ejecutar.php:ro
+      - php_temp:/var/www/temp
+
+    networks:
+      - frontend
+      - backend
+
+
+  sandbox:
+    build:
+      context: ./sandbox
+
+    depends_on:
+      init-volume:
+        condition: service_completed_successfully
+
+
+
+    volumes:
+      - php_temp:/sandbox:ro
+      - ./sandbox/php.ini:/usr/local/etc/php/conf.d/sandbox.ini:ro
+
+    working_dir: /sandbox
+
+    networks:
+      - backend
+
+    restart: unless-stopped
+
+    mem_limit: 256m
+    cpus: 1.0
+    pids_limit: 32
+
+    cap_drop:
+      - ALL
+
+    read_only: true
+
+    security_opt:
+      - no-new-privileges:true
+
+    tmpfs:
+      - /tmp:size=16M
+
+
+volumes:
+  php_temp:
+
+
+networks:
+
+  frontend:
+
+  backend:
+    internal: true
